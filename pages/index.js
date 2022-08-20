@@ -25,7 +25,7 @@ export default function Home() {
   };
 
   const markTodo = (idx) => {
-    if(todolists[idx].done.textDecoration == "") todolists[idx].done = {textDecoration: "line-through"};
+    if(todolists[idx].done.textDecoration === "") todolists[idx].done = {textDecoration: "line-through"};
     else todolists[idx].done = {textDecoration: ""};
     //alert("Fucked you Mark Suckerberg.");
     ForceUpdate();
@@ -87,7 +87,7 @@ export default function Home() {
       }
       for(let i = 0; i < temp.length; i++) temp[i].id = i;
       setTodolists(todolists = temp);
-      console.log(todolists);
+      //console.log(todolists);
       event.target.value = "";
       saveTodo();
     }
